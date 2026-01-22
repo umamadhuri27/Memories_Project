@@ -6,6 +6,15 @@ import postRoutes from './routes/posts.js'
 import userRoutes from './routes/users.js'
 dotenv.config();
 
+if (!process.env.CONNECTION_URL) {
+  console.error('FATAL ERROR: CONNECTION_URL is not defined.');
+  console.error(
+    "Please create a .env file in the 'server' directory with the following content:"
+  );
+  console.error('CONNECTION_URL=<YOUR_MONGODB_CONNECTION_URL>');
+  process.exit(1);
+}
+
 const app = express();
 
 app.use(express.json({ limit: '30mb', extended: true }));
