@@ -13,7 +13,6 @@
   "dependencies": {
     "@material-ui/core": "^4.12.4",
     "bcryptjs": "^3.0.3",
-    "body-parser": "^2.2.1",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
